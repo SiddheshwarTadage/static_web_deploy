@@ -5,7 +5,7 @@ FROM nginx:latest
 COPY . /usr/share/nginx/html
 
 # Expose the default Nginx port
-EXPOSE 80
+EXPOSE 8080
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]

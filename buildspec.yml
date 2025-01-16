@@ -1,0 +1,22 @@
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to ECR...
+      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 767397870266.dkr.ecr.ap-south-1.amazonaws.com
+      - REPOSITORY_URI=767397870266.dkr.ecr.ap-south-1.amazonaws.com/devlopment/static-web
+  build:
+    commands:
+      - echo Build started on 'date'
+      - echo Building the Docker image...
+      - docker build -t devlopment/static-web .
+      - docker tag devlopment/static-web:latest 767397870266.dkr.ecr.ap-south-1.amazonaws.com/devlopment/static-web:latest
+  post_build:
+    commands:
+      - echo Build completed on 'date'
+      - echo Pushing the Docker image...
+      - docker push 767397870266.dkr.ecr.ap-south-1.amazonaws.com/devlopment/static-web:latest
+      - echo Writing image definitions file...
+      - printf '[{"name":"%s","imageUri":"%s"}]' $CONTAINER_NAME $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+artifacts:
+  files:
+    - imagedefinitions.json
