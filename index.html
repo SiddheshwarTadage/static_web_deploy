@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Siddheshwar Tadage Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Siddheshwar Tadage</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Siddheshwar Tadage</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Aspiring DevOps Engineer  ',
+						// 'YouTuber  ',
+						// 'Teacher   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <!-- <h2>A Senior Data Analyst</h2> -->
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <!-- <p><a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a>  -->
+							<a href="https://github.com/SiddheshwarTadage" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.png.jpg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Siddheshwar Tadage</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Aspiring DevOps Engineer</span></p>
+										<p><span class="title-s">Experience: </span> <span>Fresher</span></p>
+										<p><span class="title-s">Address: </span> <span>Pune, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Linux</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Git & GitHub</span> <span class="pull-right">100%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Docker</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Python</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Jenkins/CodeBuild</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Amazon Web Services</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Kuberneties/ECS(Fargate+Ec2)</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									<span>CICD</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Hello! I'm a passionate and dedicated professional with a Bachelor's degree from BPHE Society Ahmednagar College, Ahmednagar. 
+									My academic journey laid a strong foundation, and now I'm diving deep into the world of DevOps and Cloud Computing. 
+									I'm currently honing my skills in DevOps practices, automation, and cloud technologies, aiming to bridge the gap between development and operations for seamless, efficient workflows.
+                                    With a keen interest in continuous integration, continuous deployment (CI/CD), and cloud infrastructure, 
+									I aspire to innovate and optimize the way software is built and delivered.
+									 I thrive in dynamic environments, eager to learn and adapt to the ever-evolving tech landscape. 
+									 My goal is to contribute to impactful projects, leveraging my skills to drive operational excellence and deliver high-quality solutions.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Bachelor of Computer Application (Science)</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>IT & Computer </span></li>
+									<!-- <li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li> -->
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi,Marathi</span></li>
+									<li class="d-flex"><span>DevOps Tools:</span> <span>Docker,Kuberneties,jenkins,Git/GitHub,Helm </span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Cloud, Git, CI/CD ,ECS </span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Playing Cricket</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="10">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/siddheshwar-tadage-5b7896249" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>To work with an organization where I can represent my technical and creative skills for 
+				achieving organizational goals and to continuously strive to learn new skills in pursuance 
+				of high objective of becoming competent professional and build a promising career.</p>
+          </div>
+        </div>
+
+		?
+
+				<!-- </div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2018-2021</span>
+						<h2>Senior Data Analyst</h2>
+						<span class="position">iQuanti</span>
+						<p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands. 
+							<ul>
+								<li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li>
+								<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
+								<li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div> -->
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2021-2024</span>
+    					<h2>Bachelor of Computer Application</h2>
+    					<span class="position">BPHE Society Ahmednagar College,Ahemednagr.</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020-2021</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">BPHE Society Ahmednagar College,Ahemednagr.</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+				</div>
+    		</div>
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+			
+				<div class="row">
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">July 2024 - Jan 2025</span>
+							<h2>SRE & SDET Internship</h2>
+							<span class="position"> STARMAKER Interactive Private Limited.</span>
+							<p class="mt-4"><b>SRE Responsibilities:</b></p>
+							<p>• Configured basic monitoring and alerting systems to proactively detect and address issues.</p>
+							<p>• Supported incident response, troubleshooting production issues to reduce system downtime.</p>
+							<p>• Automated routine deployment and maintenance tasks using tools like Ansible and Bash.</p>
+							<p>• Worked with engineering teams to improve reliability and create detailed documentation for processes.</p>
+							<p class="mt-4"><b>SDET Responsibilities:</b></p>
+							<p>• Developed automated test scripts using tools like Selenium and Cypress to improve test coverage</p>
+							<p>• Assisted in designing a scalable test framework, enhancing regression and functional testing.</p>
+							<p>• Documented and tracked software bugs in Jira, collaborating with developers for timely resolutions.</p>
+							<p>• Integrated test automation into CI/CD pipelines, supporting continuous integration and delivery.</p>
+						</div>
+					</div>
+				</div>
+	
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download Resume</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Projects</h1>
+			  <h2 class="mb-4">Projects</h2>
+			  <p>Below are the sample DevOps projects on Docker, Jenkins, Python, Git/GitHub, DockerHub ,Helm,Kubernetie& Aws.</p>
+			</div>
+		  </div>
+		  <div class="row d-flex">
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="  https://github.com/SiddheshwarTadage/k8s  " class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="">2-Tier Application Deployment Project</a></h3>
+				  <p> <b>Overview:-</b> This project demonstrates the deployment of a 2-tier application architecture, comprising a Flask-based web application and a MySQL database, on AWS using Kubernetes and Helm. The focus of this project was to integrate DevOps tools and techniques to automate the deployment pipeline while ensuring scalability and reliability.</p>
+				  <p><b>Key Components</b></p>
+				  <p><b>1.GitHub:</b>
+                       Source code and version control for the Flask application and database configuration files.</p>
+                  <p><b>2.Flask:</b>
+					Web application framework used to build the front-end and back-end of the application.</p>	
+				 <p><b>3.MySQL Database:</b> 
+					Relational database used to store application data.
+				</p>
+				<p><b>4.Docker:</b>Containers created for both the Flask application and the MySQL database to ensure environment consistency.</p>			
+				<p><b>5.DockerHub:</b>Hosted the Docker images for both tiers of the application.
+				</p>
+				<p><b>6.Kubernetes (K8s):</b>Orchestrated the deployment of the Docker containers on a Kubernetes cluster for scalability and high availability.
+				</p>	
+				<p><b>7.Helm:</b>Deployed the application on Kubernetes using Helm charts to simplify and manage the deployment process.</p>
+				<p><b>8.AWS:</b>Cloud platform used to deploy and manage the Kubernetes cluster.
+				</p>
+				<p><b>Workflow:</b></p>
+				<p>1.Developed and containerized the Flask application and MySQL database.</p>
+				<p>2.Pushed Docker images to DockerHub for accessibility.</p>
+				<p>3.Created a Kubernetes cluster on AWS to deploy the application.</p>
+				<p>4.Utilized Helm charts for managing Kubernetes configurations and deployments.</p>
+				<p>5.Ensured seamless integration between the Flask application and MySQL database in the cluster.</p>
+				<b>Skills and Tools:-</b>
+				<p><b>Tools:-</b>Docker, Kubernetes, Helm, DockerHub, AWS</p>
+				<p><b>Concepts:-</b>Containerization, Orchestration, 2-Tier Architecture, CI/CD Pipelines</p>
+				<p><b>Outcome:-</b>The successful deployment of a fully functional 2-tier application demonstrates my ability to integrate software development and cloud technologies effectively, ensuring scalability and efficiency.</p>
+				</div>
+
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/SiddheshwarTadage/k8s" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href=""></a>Three-Tier Application Deployment on AWS EKS</h3>
+				  <p><b>Overview:-</b>This project showcases the deployment of a three-tier application (ReactJS front-end, Node.js back-end, and MongoDB database) using Amazon Elastic Kubernetes Service (EKS). The primary goal was to practice deploying a full-stack application using DevOps tools and modern cloud infrastructure.
+				  </p>
+				  <b>Key Components:-</b>
+				  <p><b>1.ReactJS:</b>Front-end layer for user interaction.
+				  </p>
+				  <p><b>2.Node.js:</b>Back-end layer to handle application logic and API requests.</p>
+				  <p><b>3.MongoDB:</b>Database layer for persistent data storage.</p>
+				  <p><b>4.DevOps Tools and Concepts:</b></p>
+				  <p><b>Docker:</b>Containerized each application component for consistency and portability.</p>
+				  <p><b>AWS ECR:</b>Used to store Docker images for deployment.</p>
+				  <p><b>Kubernetes:</b>Orchestrated containers using AWS EKS for scalability and reliability.</p>
+				  <p><b>Application Load Balancer (ALB):</b>Distributed traffic among Kubernetes pods.</p>
+				  <p><b>Ingress Controller: </b>Managed routing within the Kubernetes cluster.</p>
+				  <b>Purpose</b>
+				  <p>-The source code for the application was obtained from GitHub.</p>
+				  <p>-The focus was on practicing and mastering the deployment of a three-tier application using DevOps tools like Docker, Kubernetes, and AWS services.</p>
+				  <p><b>Workflow</b></p>
+				  <p><b>1.Containerization:</b>Built Docker images for the ReactJS front-end, Node.js back-end, and MongoDB.</p>
+				  <p><b>2.Image Hosting:</b>Pushed the Docker images to AWS Elastic Container Registry (ECR).</p>
+				  <p><b>3.Cluster Setup: </b>Configured an AWS EKS cluster for container orchestration.</p>
+				  <p><b>4.Deployment: </b> Deployed the application components to the Kubernetes cluster using YAML manifests and Helm charts.</p>
+				  <p><b>5.Traffic Management:</b>Configured an Ingress Controller and integrated an Application Load Balancer for efficient traffic routing.</p>
+				  <p><b>6.Testing:</b>Verified functionality and ensured smooth interaction across all tiers</p>
+				  <p><b>Skills and Tools Practiced</b></p>
+				  <p><b>DevOps Tools:</b>Docker, Kubernetes, Helm, AWS ECR, AWS EKS</p>
+				  <p><b>Cloud Concepts:</b>Application Load Balancing, Traffic Routing, Container Orchestration</p>
+				  <p><b>Programming and Deployment: </b>Managing YAML manifests, Helm charts, and Kubernetes services</p>
+				  <p><b>Outcome</b>This project provided hands-on experience in deploying a three-tier application using a robust DevOps workflow. It strengthened understanding of containerization, orchestration, and AWS cloud infrastructure.</p>
+
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/SiddheshwarTadage/3-Tier_EC2_Deployment" class="block-20 zoom-effect" style="background-image: url('images/3 tier.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href=""></a>3_Tier_EC2_Deployment</h3>
+				  <p>A Node.js app deployed using a 3-tier architecture: frontend, backend, and database. CodePipeline automates build and deployment, while CodeBuild compiles and tests the code. The app is deployed to EC2 instances in an Auto Scaling Group, ensuring scalability and high availability.</p>
+				</div>
+				</div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/SiddheshwarTadage/bdd_Automation" class="block-20 zoom-effect" style="background-image: url('images/bdd.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href=""></a>Pytest BDD Automation</h3>
+				  <p>A Node.js app tested with Pytest BDD, implementing Behavior-Driven Development. Scenarios are defined in Gherkin syntax, ensuring clarity and collaboration. CodePipeline automates testing, CodeBuild executes Pytest cases, and the app is deployed to EC2 instances with an Auto Scaling Group for scalability and reliability.</p>
+				</div>
+				</div>
+			</div>
+				
+			<!-- <div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry">
+				<a href="  " class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="  ">Power BI Sales dashboard Project for Beginners</a></h3>
+				  <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	  <br>
+		  added justify-content-center to center align the last two projects 
+		  <div class="row d-flex justify-content-center">  
+			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="  " class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading"><a href="  ">Sales Forecast- Time Series Forecasting</a></h3>
+					<p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="  " class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading"><a href="  ">Customer Segmentation using clustering model</a></h3>
+					<p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				  </div>
+				</div>
+			  </div>
+		   </div>
+		</div> -->
+	  </section>
+  
+	  <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+		  <div class="row d-md-flex align-items-center">
+			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+			  <div class="block-18">
+				<div class="text">
+				  <strong class="number" data-number="10">0</strong>
+				  <span>Achievements</span>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+			  <div class="block-18">
+				<div class="text">
+				  <strong class="number" data-number='4'>0</strong>
+				  <span>Projects</span>
+				</div>
+			  </div>
+			</div>
+			<!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+			  <div class="block-18">
+				<div class="text">
+				  <strong class="number" data-number="1000">0</strong>
+				  <span>Mentored Students</span>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+			  <div class="block-18">
+				<div class="text">
+				  <strong class="number" data-number="500">0</strong>
+				  <span>Cups of coffee</span>
+				</div>
+			  </div>
+			</div> -->
+		  </div>
+		</div>
+	  
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			  <!-- <div class="container"> -->
+				  <div class="row justify-content-center">
+					  <div class="col-md-7 ftco-animate text-center">
+						  <h2>More projects on<span> Github  </span> </h2>
+						  <div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						  <br>
+						  <p><a href="https://github.com/SiddheshwarTadage" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						  </div>
+					  </div>
+				  </div>
+			  <!-- </div> -->
+		  </div>
+	  </section>
+  
+  
+  
+	  <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Contact</h1>
+			  <h2 class="mb-4">Contact Me</h2>
+			  <p>Below are the details to reach out to me!</p>
+			</div>
+		  </div>
+  
+		  <div class="row d-flex contact-info mb-5">
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+				<div class="align-self-stretch box p-4 text-center">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-map-signs"></span>
+					</div>
+					<h3 class="mb-4">Address</h3>
+				  <p>Pune, India</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+				<div class="align-self-stretch box p-4 text-center">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-phone2"></span>
+					</div>
+					<h3 class="mb-4">Contact Number</h3>
+				  <p><a href="tel://0101010101">+917038662531</a></p>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+				<div class="align-self-stretch box p-4 text-center">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-paper-plane"></span>
+					</div>
+					<h3 class="mb-4">Email Address</h3>
+				  <p><a href="mailto:info@yoursite.com">siddheshwartadage@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+				<div class="align-self-stretch box p-4 text-center">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-globe"></span>
+					</div>
+					<h3 class="mb-4">Download Resume</h3>
+				  <p><a href="#">resumelink</a></p>
+				</div>
+			</div>
+  
+			<div class="container">
+			  <br>
+			  <br>
+			  <!-- <div class="row justify-content-center">
+				  <div class="col-md-7 ftco-animate text-center">
+					  <h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				  </div>
+			  </div> -->
+				  <br>
+					  <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on  </li>
+						<!-- <li class="ftco-animate"><a href=""><span class="icon-youtube"></span></a></li> -->
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/siddheshwar-tadage-5b7896249/"><span class="icon-linkedin"></span></a></li>  
+						<!-- <li class="ftco-animate"><a href=""><span class="icon-twitter"></span></a></li>
+						<li class="ftco-animate"><a href=""><span class="icon-facebook"></span></a></li> -->
+						<li class="ftco-animate"><a href="https://www.instagram.com/siddhesh_tadage/"><span class="icon-instagram"></span></a></li>
+					  </ul>
+				  <br>
+			 </div>
+	 </div>
+   </section>
+  
+  
+   
+	  
+	  <footer class="ftco-footer ftco-section">
+		  <div class="container">
+			<div class="row">
+			  <div class="col-md-12 text-center">
+	
+				<!-- <p>Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	  Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. </p> -->
+			  </div>
+			</div>
+		  </div>
+		</footer>
+  
+  
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  
+  
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+	
+	<script src="js/main.js"></script>
+	  
+	</body>
+  </html>
