@@ -2,21 +2,17 @@ phases:
   pre_build:
     commands:
       - echo Logging in to ECR...
-      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 767397870266.dkr.ecr.ap-south-1.amazonaws.com
-      - REPOSITORY_URI=767397870266.dkr.ecr.ap-south-1.amazonaws.com/devlopment/static-web
+      - aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin 476139564776.dkr.ecr.ap-southeast-2.amazonaws.com
+      - REPOSITORY_URI=AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME
   build:
     commands:
       - echo Build started on 'date'
       - echo Building the Docker image...
-      - docker build -t devlopment/static-web .
-      - docker tag devlopment/static-web:latest 767397870266.dkr.ecr.ap-south-1.amazonaws.com/devlopment/static-web:latest
+      - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
+      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
   post_build:
     commands:
       - echo Build completed on 'date'
       - echo Pushing the Docker image...
-      - docker push 767397870266.dkr.ecr.ap-south-1.amazonaws.com/devlopment/static-web:latest
-      - echo Writing image definitions file...
-      - printf '[{"name":"%s","imageUri":"%s"}]' $CONTAINER_NAME $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
-artifacts:
-  files:
-    - imagedefinitions.json
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+      
