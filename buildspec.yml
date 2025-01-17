@@ -12,10 +12,16 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t web-hosting .
-      - docker tag web-hosting:latest 767397870266.dkr.ecr.ap-south-1.amazonaws.com/web-hosting:latest
+      - docker tag web-hosting:latest $REPOSITORY_URI:latest
 
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 767397870266.dkr.ecr.ap-south-1.amazonaws.com/web-hosting:latest
+      - docker push $REPOSITORY_URI:latest
+      - echo Writing image definitions file...
+      - printf '[{"name":"web-hosting","imageUri":"%s"}]' "$REPOSITORY_URI:latest" > imagedefinitions.json
+
+artifacts:
+  files:
+    - imagedefinitions.json
