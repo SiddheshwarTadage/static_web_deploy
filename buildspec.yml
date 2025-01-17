@@ -5,17 +5,17 @@ phases:
     commands:
       - echo Logging in to ECR...
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 767397870266.dkr.ecr.ap-south-1.amazonaws.com
-      - REPOSITORY_URI=767397870266.dkr.ecr.ap-south-1.amazonaws.com/portfolio:latest
+      - REPOSITORY_URI=767397870266.dkr.ecr.ap-south-1.amazonaws.com/web-hosting
 
   build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t portfolio .
-      - docker tag portfolio:latest 767397870266.dkr.ecr.ap-south-1.amazonaws.com/portfolio:latest
+      - docker build -t web-hosting .
+      - docker tag web-hosting:latest 767397870266.dkr.ecr.ap-south-1.amazonaws.com/web-hosting:latest
 
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 767397870266.dkr.ecr.ap-south-1.amazonaws.com/portfolio:latest
+      - docker push 767397870266.dkr.ecr.ap-south-1.amazonaws.com/web-hosting:latest
